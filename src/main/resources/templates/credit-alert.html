@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Уведомление о зачислении</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f6f9fc; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 20px auto; background: #ffffff; border-radius: 8px;
+                     padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2e7d32; }
+        .alert { background: #e8f5e9; padding: 15px; border-radius: 6px; margin: 15px 0; }
+        .footer { margin-top: 20px; font-size: 13px; color: #555; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Уведомление о кредите</h2>
+    <p>Уважаемый <b th:text="${name}">Клиент</b>,</p>
+    <div class="alert">
+        <p>На ваш счёт зачислено <b>$<span th:text="${amount}"></span></b></p>
+        <p>Номер счёта: <b th:text="${accountNumber}"></b></p>
+        <p>Дата: <span th:text="${date}"></span></p>
+        <p>Доступный баланс: <b>$<span th:text="${balance}"></span></b></p>
+    </div>
+    <p>Спасибо, что пользуетесь нашими банковскими услугами.</p>
+    <div class="footer">
+        © 2026 Payment Systeam
+    </div>
+</div>
+</body>
+</html>
