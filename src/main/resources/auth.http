@@ -1,0 +1,38 @@
+### POST register
+POST localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName":"Vlisher",
+  "lastName":"Vlivev",
+  "phoneNumber":"+123456789",
+  "email":"3ede3jumanazardilmurod@mail.ru",
+  "password":"123450"
+}
+
+### POST login
+POST localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "3ede3jumanazardilmurod@mail.ru",
+    "password": "123450"
+}
+
+### POST forget-password
+POST localhost:8080/api/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email":"jumanazardilmurod@mail.ru"
+}
+
+### GET reset-Password
+GET localhost:8080/api/auth/reset-password
+Content-Type: application/json
+
+{
+    "code":"91I9S",
+    "newPassword":"012345"
+}
+

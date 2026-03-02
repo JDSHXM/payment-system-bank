@@ -35,15 +35,17 @@ public class AccountDTO {
 
     private AccountType accountType;
 
-    @JsonBackReference // «Это не будет добавлено в AccountDTO. Это будет проигнорировано,
-                       // потому что является обратной ссылкой (back reference).
+    // «Это не будет добавлено в AccountDTO. Это будет проигнорировано,
+    // потому что является обратной ссылкой (back reference).
+    @JsonBackReference
     private UserDTO user;
 
     private Currency currency;
 
     private AccountStatus status;
 
-    @JsonBackReference //Это помогает избежать рекурсивного цикла, игнорируя UserDTO внутри AccountDTO.
+    //Это помогает избежать рекурсивного цикла, игнорируя UserDTO внутри AccountDTO.
+    @JsonBackReference
     private List<TransactionDTO> transactions;
 
     private LocalDateTime closedAt;

@@ -12,7 +12,7 @@ public class RegistrationRequest {
     @NotBlank(message = "FirstName is required")
     private String firstName;
 
-    private String lastname;
+    private String lastName;
 
     private String phoneNumber;
 

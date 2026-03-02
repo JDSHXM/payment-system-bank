@@ -1,0 +1,24 @@
+###  POST  Role yaratish u-n ADMIN, COSTUMER, AUDIT
+POST localhost:8080/api/roles
+Content-Type: application/json
+
+{
+  "name":"AUDIT"
+}
+
+
+### GET get all roles Barcha Rolelarni olish uchun
+GET localhost:8080/api/roles
+
+### UPDATE Role
+PUT http://localhost:8080/api/roles
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "SUPER_ADMIN"
+}
+
+### DELETE Role
+#DeleteMapping("/{id}")  Role ning id si beriladi.
+DELETE http://localhost:8080/api/roles/3
